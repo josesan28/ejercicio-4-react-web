@@ -1,8 +1,8 @@
 const BASE_URL = 'https://v1.american-football.api-sports.io';
 const API_KEY = import.meta.env.VITE_API_KEY;
 
-export const getTeams = async () => {
-  const res = await fetch(`${BASE_URL}/teams`, {
+export const getTeams = async (league = 1, season = 2024) => {
+  const res = await fetch(`${BASE_URL}/teams?league=${league}&season=${season}`, {
     headers: {
       'x-rapidapi-key': API_KEY,
       'x-rapidapi-host': 'v1.american-football.api-sports.io',

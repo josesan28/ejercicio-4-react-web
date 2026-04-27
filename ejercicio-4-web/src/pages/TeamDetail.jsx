@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { getTeamById } from '../api/sportsApi';
 
 function TeamDetail() {
@@ -21,8 +21,12 @@ function TeamDetail() {
 
   return (
     <main>
+      <Link to="/teams">← Volver</Link>
+      <img src={team.logo} alt={`Logo de ${team.name}`} width={128} height={128} />
       <h1>{team.name}</h1>
       <p>{team.city}</p>
+      <p>{team.conference}</p>
+      <p>{team.division}</p>
     </main>
   );
 }
