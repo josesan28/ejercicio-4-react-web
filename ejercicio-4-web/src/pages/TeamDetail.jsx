@@ -20,8 +20,10 @@ function TeamDetail() {
   if (!team) return <p>Equipo no encontrado</p>;
 
   return (
-    <main>
-      <Link to="/teams">← Volver</Link>
+    <main className="page team-detail">
+      <Link className="back-link" to="/teams">
+        ← Volver
+      </Link>
       <img src={team.logo} alt={`Logo de ${team.name}`} width={128} height={128} />
       <h1>{team.name}</h1>
       <p>{team.city}</p>

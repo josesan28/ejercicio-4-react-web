@@ -24,10 +24,10 @@ function TeamList() {
   if (error) return <p>{error}</p>;
 
   return (
-    <main>
+    <main className="page">
       <h1>Equipos NFL</h1>
       <SearchBar value={query} onChange={setQuery} placeholder="Buscar equipo..." />
-      <div>
+      <div className="team-grid">
         {filtered.map((item) => (
           <TeamCard
             key={item.id}
@@ -39,6 +39,7 @@ function TeamList() {
           />
         ))}
       </div>
+      {filtered.length === 0 && <p>No se encontraron equipos con ese criterio.</p>}
     </main>
   );
 }
