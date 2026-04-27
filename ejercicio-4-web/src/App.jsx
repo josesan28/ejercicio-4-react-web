@@ -1,9 +1,20 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import TeamList from './pages/TeamList';
+import TeamDetail from './pages/TeamDetail';
+import NotFound from './pages/NotFound';
+
 function App() {
   return (
-    <main style={{ padding: '2rem', fontFamily: 'system-ui, sans-serif' }}>
-      <h1>Ejercicio 4 - React</h1>
-    </main>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/teams" element={<TeamList />} />
+        <Route path="/teams/:id" element={<TeamDetail />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
