@@ -20,7 +20,7 @@ function TeamCard({ id, name, city, logo, conference }) {
       <p>{conference}</p>
       <div className="team-card__actions">
         <button onClick={handleFavorite}>
-          {favorited ? '★ Quitar favorito' : '☆ Favorito'}
+          {favorited ? 'Quitar favorito' : 'Favorito'}
         </button>
         <Link className="team-card__link" to={`/teams/${id}`}>
           Ver detalle

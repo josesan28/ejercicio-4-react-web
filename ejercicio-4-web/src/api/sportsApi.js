@@ -9,7 +9,7 @@ export const getTeams = async (league = 1, season = 2024) => {
     },
   });
   const data = await res.json();
-  return data.response;
+  return data.response.slice(0, 32);
 };
 
 export const getTeamById = async (id) => {
