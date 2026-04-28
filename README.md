@@ -18,14 +18,6 @@ Página construida con Vite + React + React Router que consume la API de [api-sp
 - Docker y Docker Compose (opcional)
 - API key de [api-sports.io](https://api-sports.io)
 
-## Variables de entorno
-
-Crear un archivo `.env` dentro de `ejercicio-4-web/`:
-
-```env
-VITE_API_KEY=api_key_compartida_por_otro_medio
-```
-
 ## Correr el proyecto
 
 ### Clonar el repositorio
@@ -34,6 +26,14 @@ Correr el siguiente comando:
 
 ```bash
 git clone [url-del-repositorio]
+```
+
+## Variables de entorno
+
+Crear un archivo `.env` dentro de `ejercicio-4-web/`:
+
+```env
+VITE_API_KEY=api_key_compartida_por_otro_medio
 ```
 
 ### Con Docker (recomendado)
